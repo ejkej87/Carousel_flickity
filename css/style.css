@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  max-width: 1200px;
   height: 50vh;
   min-height: 250px;
   text-align: center;
@@ -10,11 +11,56 @@
 
 .container img {
   height: 50vh;
+  width: 50%;
 }
 
 .container .carousel-cell img {
   display: block;
   max-height: 100%;
+}
+
+#reset {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  z-index: 999;
+  border: none;
+  overflow: visible;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: #333;
+}
+
+.flickity-prev-next-button:hover {
+  background: #F90;
+}
+
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+
+.flickity-prev-next-button.next {
+  right: -40px;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
 }
 
 /*# sourceMappingURL=style.css.map */
