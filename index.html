@@ -12,23 +12,72 @@
 
    <button class="button" id="reset" data-selector=".cell1">Reset</button>
    <div class="carousel" data-flickity='{ "pageDots": false }'>
-      <div class="container carousel-cell" id="carousel-cell1" style="background-image: url(images/question-mark-1872665_1280.jpg)" );>
-         <p>Sample text</p><img src="/images/whiskey-2171646_960_720.jpg" alt=""></div>
-      <div class="container carousel-cell" id="carousel-cell2" style="background-image: url(images/question-mark-1872665_1280.jpg)" ;>
-         <p>Sample text</p><img src="/images/cigar-1473699__340.jpg" alt=""></div>
-      <div class="container carousel-cell" id="carousel-cell3" style="background-image: url(images/question-mark-1872665_1280.jpg)" ;>
-         <p>Sample text</p><img src="/images/bottles-3006387__340.png" alt=""></div>
-      <div class="container carousel-cell" id="carousel-cell4" style="background-image: url(images/question-mark-1872665_1280.jpg)" ;>
-         <p>Sample text</p><img src="/images/whisky-461872__340.jpg" alt=""></div>
-      <div class="container carousel-cell" id="carousel-cell5" style="background-image: url(images/question-mark-1872665_1280.jpg)" ;>
-         <p>Sample text</p><img src="/images/alcohol-1889682__340.jpg" alt=""></div>
+
    </div>
    <div class="progress-bar"></div>
+   <div id="page-wrapper" class="container">
+      <div id="map"></div>
+   </div>
+
+
 
 
    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
    <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+
+   <script id="template" type="x-tmpl-mustache">
+      <div class="container carousel-cell" id="carousel-cell{{id}}" style="background-image: url({{image}}); background-size: cover;" );>
+         <h2>{{{ title }}}</h2>
+         <p>{{{ description}}}</p>
+
+      </div>
+
+   </script>
+
+   <script>
+      var imagesData = [{
+            id: 1,
+         image: "https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            title: 'Sample tittle',
+            description: 'Sample description'
+
+         },
+         {
+            id: 2,
+            image: "http://via.placeholder.com/400x200",
+            title: 'Sample tittle',
+            description: 'Sample description'
+
+         },
+         {
+            id: 3,
+            image: "http://via.placeholder.com/400x200",
+            title: 'Sample tittle',
+            description: 'Sample description'
+
+         },
+         {
+            id: 4,
+            image: "http://via.placeholder.com/400x200",
+            title: 'Sample tittle',
+            description: 'Sample description'
+
+         },
+         {
+            id: 5,
+            image: "http://via.placeholder.com/400x200",
+            title: 'Sample tittle',
+            description: 'Sample description'
+
+         },
+
+      ];
+   </script>
+
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS8JvfjLxFwLWsuNhDTwhd_mMZQf1O82Q&callback=window.initMap"></script>
+   <script src='/vendor/mustache.min.js'></script>
    <script src='js/script.js'></script>
+
 </body>
 
 </html>

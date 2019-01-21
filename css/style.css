@@ -1,12 +1,16 @@
+body {
+  margin: 0;
+}
+
 .container {
   width: 100%;
-  max-width: 1200px;
-  height: 50vh;
+  height: 48vh;
   min-height: 250px;
   text-align: center;
   background-size: cover;
-  text-align: center;
   color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .container img {
@@ -17,6 +21,11 @@
 .container .carousel-cell img {
   display: block;
   max-height: 100%;
+}
+
+.container p {
+  position: absolute;
+  bottom: 10px;
 }
 
 #reset {
@@ -48,19 +57,15 @@
   color: white;
 }
 
-/* position outside */
-.flickity-prev-next-button.previous {
-  left: -40px;
-}
-
-.flickity-prev-next-button.next {
-  right: -40px;
-}
-
 .progress-bar {
-  height: 20px;
+  height: 1vh;
   width: 0;
   background: #333;
+}
+
+.container #map {
+  height: 50vh;
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
