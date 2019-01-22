@@ -1,15 +1,16 @@
 var elem = document.querySelector('.carousel');
 
+
 (function () {
    var templateItem = document.getElementById('template').innerHTML;
-   
+
 
    Mustache.parse(templateItem);
 
    var listItems = '';
 
    for (var i = 0; i < imagesData.length; i++) {
-//      console.log(imagesData);
+//            console.log(imagesData);
       var render = Mustache.render(templateItem, imagesData[i]);
       elem.insertAdjacentHTML('beforeEnd', render);
    }
@@ -46,24 +47,43 @@ flkty.on('scroll', function (progress) {
    window.initMap = function () {
 
       // Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne.
-      var uluru = {
-         lat: -25.363,
-         lng: 131.044
+      var coords1 = {
+         lat: 50.064382,
+         lng: 19.943420
       };
-
-      // W zmiennej map zapisujemy nową instancję obiektu Map. 
+      var coords2 = {
+         lat: 49.987239,
+         lng: 20.064183
+      };
+      var coords3 = {
+         lat: 52.229870,
+         lng: 21.019985
+      };
+      var coords4 = {
+         lat: 50.265687,
+         lng: 19.029957
+      }
+      var coords5 = {
+         lat: 50.040690,
+         lng: 21.996066
+      }      
+     
       var map = new google.maps.Map(document.getElementById('map'), {
-         // Podajemy opcje mapy, np. zoom i punkt wycentrowania mapy.
-         zoom: 4,
-         center: uluru
+         zoom: 7,
+         center: imagesData[0].coords,
       });
 
-      // Definiujemy marker jako nową instancję obiektu Marker.
-      var marker = new google.maps.Marker({
-         // I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
-         position: uluru,
-         map: map
-      });
+      for(var i =0; i<imagesData.length; i++) {
+         
+//         console.log(imagesData[i].coords);
+         var marker = new google.maps.Marker({
+            position: imagesData[i].coords,
+            map: map
+         });
+      } 
    }
+   
+        
+   
 
 })();

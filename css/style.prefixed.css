@@ -1,72 +1,24 @@
-body {
-  margin: 0;
-}
+body { margin: 0; }
 
-.container {
-  width: 100%;
-  height: 48vh;
-  min-height: 250px;
-  text-align: center;
-  background-size: cover;
-  color: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
+.container { width: 100%; height: 48vh; min-height: 250px; text-align: center; background-size: cover; color: #fff; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; }
 
-.container img {
-  height: 50vh;
-  width: 50%;
-}
+.container img { height: 50vh; width: 50%; }
 
-.container .carousel-cell img {
-  display: block;
-  max-height: 100%;
-}
+.container .carousel-cell img { display: block; max-height: 100%; }
 
-.container p {
-  position: absolute;
-  bottom: 10px;
-}
+.container p { position: absolute; bottom: 10px; }
 
-#reset {
-  position: absolute;
-  top: 30px;
-  left: 50px;
-  z-index: 999;
-  border: none;
-  overflow: visible;
-}
+#reset { position: absolute; top: 30px; left: 50px; z-index: 999; border: none; overflow: visible; }
 
-.flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  background: #333;
-}
+.flickity-prev-next-button { width: 30px; height: 30px; border-radius: 5px; background: #333; }
 
-.flickity-prev-next-button:hover {
-  background: #F90;
-}
+.flickity-prev-next-button:hover { background: #F90; }
 
 /* arrow color */
-.flickity-prev-next-button .arrow {
-  fill: white;
-}
+.flickity-prev-next-button .arrow { fill: white; }
 
-.flickity-prev-next-button.no-svg {
-  color: white;
-}
+.flickity-prev-next-button.no-svg { color: white; }
 
-.progress-bar {
-  height: 1vh;
-  width: 0;
-  background: #333;
-}
+.progress-bar { height: 1vh; width: 0; background: #333; }
 
-.container #map {
-  height: 50vh;
-  width: 50%;
-}
-/*# sourceMappingURL=style.prefixed.css.map */
+.container #map { height: 50vh; width: 50%; }
