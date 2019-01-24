@@ -96,7 +96,6 @@ flkty.on('scroll', function (progress) {
 
             flkty.on('change', function () {
 //               map.panTo(imagesData[i].coords);
-               console.log(imagesData[i]);
             });
 
          };
