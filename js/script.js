@@ -94,8 +94,9 @@ flkty.on('scroll', function (progress) {
             //            flkty.selectCell(i);
             //         })
 
-            flkty.on('change', function () {
-//               map.panTo(imagesData[i].coords);
+            
+            flkty.on('change', function (index) {
+               map.panTo(imagesData[index].coords);
             });
 
          };
